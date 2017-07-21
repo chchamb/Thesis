@@ -1,0 +1,266 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colorado State University LaTeX Thesis Template and Documentation
+%
+% by
+%   Elliott Forney
+%   2017
+%
+% This is free and unencumbered software released into the public domain.
+% 
+% Anyone is free to copy, modify, publish, use, compile, sell, or
+% distribute this software, either in source code form or as a compiled
+% binary, for any purpose, commercial or non-commercial, and by any
+% means.
+% 
+% In jurisdictions that recognize copyright laws, the author or authors
+% of this software dedicate any and all copyright interest in the
+% software to the public domain. We make this dedication for the benefit
+% of the public at large and to the detriment of our heirs and
+% successors. We intend this dedication to be an overt act of
+% relinquishment in perpetuity of all present and future rights to this
+% software under copyright law.
+% 
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+% EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+% IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+% OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+% ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+% OTHER DEALINGS IN THE SOFTWARE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% use the thesis document class
+% this is derived from the standard book class
+% and supports many of the same features
+%\documentclass[master]{thesis}
+%\documentclass[master,showframe]{thesis} % showframe helps troubleshoot margins
+\documentclass[doctor]{thesis} % for a dissertation
+%\documentclass[bachelor]{thesis} % for an honor's thesis
+
+% fonts
+% use times font by default but you can choose a
+% different font if you would like
+%\usepackage{fourier} % fourier is also a nice choice
+
+%\usepackage{helvet} % sans-serif helvetica works too
+%\renewcommand\familydefault{\sfdefault}
+
+% ams math packages
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm,amssymb}
+
+% graphics packages
+\usepackage[pdftex]{graphicx} % remove pdftex if you are not compiling to pdf
+\graphicspath{{./figures/}} % this places all graphics in the figures subdirectory
+
+% allowed graphics extensions
+% uncomment if you prefer to add extension in \includegraphics
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% allows the creation of subfigures
+\usepackage[caption=false]{subfig}
+
+% book tables are simple and look nice
+\usepackage{booktabs}
+
+% for specifying urls and links
+\usepackage{url}
+\urlstyle{same} % same style as regular text
+
+% Title Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% title of your thesis
+\title{Single Barium Atom Imaging in Solid Xenon Matrix for Use in nEXO Experiment}
+
+% author's name
+\author{Christopher Chambers}
+
+% author's email address
+\email{chrischambers89@gmail.com}
+
+% department name
+\department{Department of Physics}
+
+% semester of completion
+\semester{Fall 2017}
+
+% committee member names
+\advisor{William Fairbank}
+%\coadvisor{Co-Advisor Name} % co-advisor is optional
+\committee{Siu Au Lee} % as many committee entries as you need
+\committee{Robert Wilson}
+\committee{Alan VanOrden}
+
+% Copyright Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% here is an example of student copyright declaration
+% note that the \copyright command prints the copyright symbol,
+% so we use the name \mycopyright instead
+\mycopyright{%
+Copyright by Christopher Chambers 2017 \\
+All Rights Reserved
+}
+
+% here is an example of a creative commons copyright license
+% ask the graduate school for more information, if you are interested
+%\mycopyright{%
+%This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 United States License.
+%
+%\vspace{3em}
+%
+%To view a copy of this license, visit:
+%
+%\vspace{2em}
+%
+%\url{http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode}
+%
+%\vspace{3em}
+%
+%Or send a letter to:
+%
+%\vspace{2em}
+%
+%Creative Commons
+%
+%171 Second Street, Suite 300
+%
+%San Francisco, California, 94105, USA.
+%}
+
+% Abstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\abstract{%
+Neutrinoless double beta decay (0$\nu\beta\beta$) is an non-standard model decay process by which two simultaneous beta decays occur, with no emission of neutrinos. This decay is of great interest. If observed it will show the majorana nature of the neutrino, as well as violate lepton conservation. A measurement of the half-life will also give information on the absolute mass scale of the neutrinos. EXO-200 and nEXO are 0$\nu\beta\beta$ searches using liquid enriched xenon-136 time projection chamber (TPC) technology. EXO-200 first observed two neutrino double beta decay (2$\nu\beta\beta$) in xenon-136, the rarest decay ever observed, and thus a low background measurement is vital to success in observation of the even more rare 0$\nu\beta\beta$ decay mode. In this dissertation, research and development of a technique for positive identification of the barium-136 daughter (barium tagging) is presented. It is desirable to incorporate barium tagging into the future nEXO detector, as it provides discrimination against all background except for the 2$\nu\beta\beta$ decay mode. The scheme being developed in this work involves extraction by cryogenic probe to solid xenon, followed by matrix-isolation fluorescence spectroscopy for the identification of the barium daughter. This work focuses on the detection of single barium atoms in a prepared solid xenon sample. Single atom sensitivity has been achieved and imaging of spatially separated atoms has observed candidate barium atom signals.
+}
+
+% Acknowledgments 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\acknowledgements{%
+I would like to thank 
+}
+
+% Metadata
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% consider using hyperref to insert pdf metadata and make links clickable
+% safe to remove if not using pdf or if it causes problems
+\usepackage[pdfpagelabels,pdfusetitle,colorlinks=false,pdfborder={0 0 0}]{hyperref}
+
+\begin{document} % preamble is complete, add any custom packages above
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frontmatter % starts preliminary pages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitle              % insert title page
+\makemycopyright        % insert copyright page
+\makeabstract           % insert abstract page
+\makeacknowledgements   % insert acknowledgements page
+
+% any extra preliminary pages can be added here
+% below is an example of a dedication page
+% the dedication page is optional
+\prelimtocentry{Dedication} % add table of contents entry
+\begin{flatcenter} % center without extra space
+
+    % page title
+    DEDICATION
+
+    %\vspace{3em} % place at top
+    \vfill % or center on page
+
+    \noindent \textit{I would like to dedicate this thesis to my dog fluffy.}
+    \vfill % fill extra space at bottom
+\end{flatcenter}
+\newpage
+
+\tableofcontents    % insert table of contents
+\listoftables       % insert list of tables (optional)
+\listoffigures      % insert list of figures (optional)
+
+\mainmatter % starts thesis body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduction}
+\label{chap:intro}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neutrinos have always had a strong connection to beta decay. When beta decay was observed to have a continuous energy spectrum, the neutrino was proposed by W. Pauli in 1930 out of consideration for the conservation of energy. This proposed particle was light, carried no electric charge, and interacted so rarely with matter as to escape detection. In 1932, E. Fermi incorporated the neutrino into the theory of beta decay, and with the subsequent study of many radioactive nuclei, found the theory agreed well. Neutrinos interact very rarely with matter, thus the neutrino was not experimentally detected until 1954 when Cowan and Reines observed (anti-)neutrinos created in nuclear reactors. In later experiments, neutrinos have been observed to be produced in the sun as well as in the atmosphere and high-energy astronomical phenomena. These sources of neutrinos have been used to gain understanding into nuclear physics, geophysics, as well as astrophysics. Detection of a neutrino burst from a supernova may be the best scheme for alerting optical telescopes to observe supernovae.\par 
+Neutrinos were incorporated into the standard model (SM) of particle physics as massless, neutral, weakly interacting particles. SM neutrinos come in three flavors, one each as a partner particle to the charged leptons (electron,muon and tau). In the 1990's the neutrino was found to have non-zero mass and oscillate between flavors. This shows the neutrino sector can provide a tool to discover beyond SM physics. The search for neutrino-less double beta decay ($0\nu\beta\beta$) is another beyond standard model process that has the potential to uncover many things, including the matter-antimatter asymmetry of the universe.\par
+Observation of 0$\nu\beta\beta$ decay would provide many clues about the universe. The half-life of this decay would provide a measure of the absolute mass of the neutrinos. this process also shows directly that neutrinos are their own anti-particle, called majorana particles, and that lepton number is not conserved. These facts are key to the see-saw mechanism, one theory to explain the matter dominance of the universe. The creation of heavy neutrinos in the big bang, along with their preferential decay to leptons instead of antileptons would result in matter dominance. This chapter will discuss the current extended SM theory for neutrinos, as well as $0\nu\beta\beta$ decay and the EXO-200 and nEXO experimental searches.    
+
+   
+\section{Neutrinos} 
+\subsection{Neutrino Mass}
+\subsection{Neutrinoless Double Beta Decay}
+\section{Enriched Xenon Observatory}
+\subsection{EXO-200}
+\subsection{nEXO}
+\subsection{Barium Tagging}
+
+
+
+\chapter{Theory}
+\label{chap:theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Barium Spectroscopy}
+\subsection{Atomic Transitions}
+\subsection{Ionic Transitions}
+\section{Matrix Isolation Spectroscopy}
+\subsection{Shifts of Vacuum Transitions}
+\subsection{Barium Guest Atom Sites in Xenon}
+\section{Accelerated Ion Beams}
+
+
+\chapter{Experiment}
+\label{chap:experiment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Ion Beam Deposition System}
+\section{Laser Excitation System}
+\section{Fluorescence Collection System}
+
+\chapter{Analysis}
+\label{chap:analysis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Spectrum Analysis}
+\section{Imaging Analysis}
+\section{Scanned Image Analysis} 
+
+\chapter{Results}
+\label{chap:results}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Identification of Ba Atom Lines}
+\section{Imaging of Ba Atoms with a Fixed Laser}
+\section{Imaging of Ba Atoms with Scanned Laser}
+
+\chapter{Conclusions}
+\label{chap:conclusions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Feasibility as a Ba Tagging Technique}
+\section{Unification with Extraction System}
+\section{Future Work}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% unsorted BibTeX style
+% check here for more:  https://www.sharelatex.com/learn/Bibtex_bibliography_styles
+\bibliographystyle{unsrt}
+\bibliography{sample} % change sample to the name of your .tex file, e.g., thesis
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
